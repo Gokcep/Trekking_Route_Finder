@@ -1,0 +1,121 @@
+
+print("***Welcome to the Trekking Route finder for families with kids!***")
+print("Please answer our questions and we will find the best route for you in and around Munich!")
+print("Lets start with a simple question!")
+
+#Easiest routes which are available for a buggy with access to public transport
+Routes1 = ["der Wald Erlebnispfad", "Eibsee", "Schliersee"]
+
+#Easiest routes which are available for a buggy without access to public transport
+Routes2 =["Partnachklam", "Barmsee", "Tannenhütte Weg", "Hersching-Kloster Andechs"]
+
+#Middle level routes without access to public transport
+Routes3 =[ "Griessbachklamm", "Plansee", "Grosser Ostersee", "Breitachklam"]
+
+#Middle level routes with access to public transport
+Routes4 = ["Geisterklamm", "Prinzenweg", "Griessbachklamm", "Josefstaler Wasserfälle"]
+
+
+distance = int(input("How many kilometers would you like to walk? (Please enter a number): "))
+transportation = input("Do you have a car or would you like to take the public transport (eg. train)? (Please answer car or public): ")
+buggy = input("Do you need to take a buggy with you? (Please answer yes or no):")
+
+
+
+if distance <= 6 and transportation == "public" and buggy == "yes":
+  print(Routes1[0])
+  answer = input("Have you been to this route? (Please answer yes or no): ")
+  if answer == "no":
+    print("Good! We found you a beautiful route. Have fun!")
+  elif answer == "yes":
+    x = 1
+    print("No problem, lets find you another route...")
+    print("How about", Routes1[x], "?")
+    answer2 = input("Have you been to this route? (Please answer yes or no): ")
+    if answer2 == "yes":
+      x +=1
+      print("No problem, lets find you another route...")
+      print("How about", Routes1[x], "?")
+      answer2 = input("Have you been to this route? (Please answer yes or no): ")
+      if x + 1 == len(Routes1):
+        print("We are very sorry but we are out of recommendations for you! It seems like you have been to many places already. You can give different values and try again")
+    elif answer2 == "no":
+      print("Good! We found you a beautiful route. Have fun!")
+    
+  else:
+      print("Please enter a valid content")
+
+
+
+if distance <= 6 and transportation == "car" and buggy == "yes":
+  print(Routes2[0])
+  answer = input("Have you been to this route? (Please answer yes or no): ")
+  if answer == "no":
+    print("Good! We found you a beautiful route. Have fun!")
+  elif answer == "yes":
+    x = 1
+    print("No problem, lets find you another route...")
+    print("How about", Routes2[x], "?")
+    answer2 = input("Have you been to this route? (Please answer yes or no): ")
+    if answer2 == "yes":
+      x +=1
+      print("No problem, lets find you another route...")
+      print("How about", Routes2[x], "?")
+      answer2 = input("Have you been to this route? (Please answer yes or no): ")
+      if x + 1 == len(Routes2):
+        print("We are very sorry but we are out of recommendations for you! It seems like you have been to many places already. You can give different values and try again")
+    elif answer2 == "no":
+      print("Good! We found you a beautiful route. Have fun!")
+    
+  else:
+      print("Please enter a valid content")
+      
+      
+
+if distance > 6 and transportation == "car":
+  print(Routes3[0])
+  answer = input("Have you been to this route? (Please answer yes or no): ")
+  if answer == "no":
+    print("Good! We found you a beautiful route. Have fun!")
+  elif answer == "yes":
+    x = 1
+    print("No problem, lets find you another route...")
+    print("How about", Routes3[x], "?")
+    answer2 = input("Have you been to this route? (Please answer yes or no): ")
+    if answer2 == "yes":
+      x +=1
+      print("No problem, lets find you another route...")
+      print("How about", Routes3[x], "?")
+      answer2 = input("Have you been to this route? (Please answer yes or no): ")
+      if x + 1 == len(Routes3):
+        print("We are very sorry but we are out of recommendations for you! It seems like you have been to many places already. You can give different values and try again")
+    elif answer2 == "no":
+      print("Good! We found you a beautiful route. Have fun!")
+    
+  else:
+      print("Please enter a valid content")   
+      
+      
+
+if distance > 6 and transportation == "public":
+  print(Routes4[0])
+  answer = input("Have you been to this route? (Please answer yes or no): ")
+  if answer == "no":
+    print("Good! We found you a beautiful route. Have fun!")
+  elif answer == "yes":
+    x = 1
+    print("No problem, lets find you another route...")
+    print("How about", Routes4[x], "?")
+    answer2 = input("Have you been to this route? (Please answer yes or no): ")
+    if answer2 == "yes":
+      x +=1
+      print("No problem, lets find you another route...")
+      print("How about", Routes4[x], "?")
+      answer2 = input("Have you been to this route? (Please answer yes or no): ")
+      if x + 1 == len(Routes4):
+        print("We are very sorry but we are out of recommendations for you! It seems like you have been to many places already. You can give different values and try again")
+    elif answer2 == "no":
+      print("Good! We found you a beautiful route. Have fun!")
+    
+  else:
+      print("Please enter a valid content")   
